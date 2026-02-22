@@ -1,0 +1,6 @@
+{
+    "maa.cli.not.install": "maa cli未安装，开始安装maa cli",
+    "maa.cli.download.start": "开始下载maa cli",
+    "maa.cli.download.success": "maa cli下载成功",
+    "maa.cli.install.core.start": "开始安装maa core"
+}
