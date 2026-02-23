@@ -12,3 +12,4 @@ else:
 #TODO: 将windows返回的locale字符串转换为标准语言代码,如Chinese (Simplified)_China.936 --> zh_CN
 
 from .aria2 import aria2
+from .config import Config

@@ -2,5 +2,12 @@
     "maa.cli.not.install": "maa cli未安装，开始安装maa cli",
     "maa.cli.download.start": "开始下载maa cli",
     "maa.cli.download.success": "maa cli下载成功",
-    "maa.cli.install.core.start": "开始安装maa core"
+    "maa.cli.install.core.start": "开始安装maa core",
+    
+    "aria2.download.start": "aria2未安装，开始下载aria2",
+    "aria2.not.support": "Linux用户请从发行版仓库安装aria2并链接到项目目录下DATA/aria2/aria2c\nwindows用户请下载对应系统架构的aria2c.exe并放置到项目目录下DATA/aria2/aria2c.exe",
+    "aria2.download.error": "下载失败，请检查网络连接",
+    "aria2.download.success": "下载完成",
+    "aria2.install.start": "开始安装aria2",
+    "aria2.install.success": "aria2安装成功"
 }

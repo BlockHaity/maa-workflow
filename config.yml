@@ -1,0 +1,4 @@
+download:
+  gh-proxy: "https://v6.gh-proxy.com/"
+  aria2:
+    threads: 16
