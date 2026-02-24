@@ -3,6 +3,7 @@ import platform
 import subprocess
 import os
 import sys
+import zipfile
 from modules.tools import Logging, i18n, aria2, Config
 
 class setup():

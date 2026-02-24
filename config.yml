@@ -2,3 +2,7 @@ download:
   gh-proxy: "https://v6.gh-proxy.com/"
   aria2:
     threads: 16
+
+webui:
+  address: "0.0.0.0"
+  port: 12023

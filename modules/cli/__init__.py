@@ -1,5 +1,5 @@
 from .maa import maa
 from .workflow import workflow
-from .setup import setup
+from ..tools.setup import setup
 
 def main():

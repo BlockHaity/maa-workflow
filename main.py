@@ -1,5 +1,5 @@
 import sys
-from modules.backend import setup
+from modules.cli import setup
 
 if __name__ == "__main__":
     setup.check_aria2()
@@ -10,11 +10,11 @@ if __name__ == "__main__":
         sys.exit(1)
     
     if sys.argv[1] == "webui":
-        from modules.webui import main as webui_main
+        from modules.web import main as webui_main
         webui_main()
         
     elif sys.argv[1] == "run":
-        from modules.backend import main as workflow_main
+        from modules.cli import main as workflow_main
         workflow_main()
     
     else:
