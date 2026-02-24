@@ -1,8 +1,50 @@
 download:
-  gh-proxy: "https://v6.gh-proxy.com/"
+  gh-proxy: https://v6.gh-proxy.com/
   aria2:
     threads: 16
 
 webui:
-  address: "0.0.0.0"
+  address: 0.0.0.0
   port: 12023
+
+# Maa相关配置https://docs.maa.plus/zh-cn/manual/cli/config.html#cli-%E7%9B%B8%E5%85%B3%E9%85%8D%E7%BD%AE
+maa:
+  maa-core:
+    connection:
+      adb_path: DATA/adb/adb
+      config: CompatMac
+      device: emulator-5554
+      preset: MuMuPro
+    instance_options:
+      adb_lite_enabled: false
+      deployment_with_pause: false
+      kill_adb_on_exit: false
+      touch_mode: MaaTouch
+    resource:
+      global_resource: YoStarEN
+      platform_diff_resource: iOS
+      user_resource: true
+    static_options:
+      cpu_ocr: false
+      gpu_ocr: 1
+  maa-cli:
+    cli:
+      api_url: https://github.com/MaaAssistantArknights/maa-cli/raw/version/
+      channel: Stable
+      components:
+        binary: true
+      download_url: https://github.com/MaaAssistantArknights/maa-cli/releases/download/
+    core:
+      api_url: https://github.com/MaaAssistantArknights/MaaRelease/raw/main/MaaAssistantArknights/api/version/
+      channel: Stable
+      components:
+        library: true
+        resource: true
+      test_time: 0
+    resource:
+      auto_update: true
+      backend: libgit2
+      remote:
+        branch: main
+        url: https://github.com/MaaAssistantArknights/MaaResource.git
+      warn_on_update_failure: true

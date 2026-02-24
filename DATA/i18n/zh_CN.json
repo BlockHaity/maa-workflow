@@ -9,5 +9,7 @@
     "aria2.download.error": "下载失败，请检查网络连接",
     "aria2.download.success": "下载完成",
     "aria2.install.start": "开始安装aria2",
-    "aria2.install.success": "aria2安装成功"
+    "aria2.install.success": "aria2安装成功",
+
+    "maa.task.run.error": "任务运行失败："
 }

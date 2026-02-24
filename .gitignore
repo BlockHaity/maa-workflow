@@ -6,6 +6,7 @@ frontend/dist
 #外部文件
 DATA/maa-cli/*
 DATA/aria2/*
+DATA/adb/*
 #PYCache
 __pycache__/
 */__pycache__/

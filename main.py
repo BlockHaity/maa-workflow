@@ -5,6 +5,7 @@ if __name__ == "__main__":
     setup.check_aria2()
     setup.check_maa_cli()
     setup.maa_cli_update()
+    setup.config()
     if len(sys.argv) < 2:
         print("请指定运行模式:\n  python main.py webui - 启动Web界面\n  python main.py run [file] - 运行工作流")
         sys.exit(1)

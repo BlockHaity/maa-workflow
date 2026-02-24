@@ -4,6 +4,7 @@ import subprocess
 import os
 import sys
 import zipfile
+import yaml
 from modules.tools import Logging, i18n, aria2, Config
 
 class setup():
@@ -47,7 +48,6 @@ class setup():
                 subprocess.run(["DATA/maa-cli/maa", "install"])
 
     def maa_cli_update():
-        subprocess.run(["DATA/maa-cli/maa", "self", "update"])
         subprocess.run(["DATA/maa-cli/maa", "update"])
 
     def check_aria2():
@@ -81,3 +81,17 @@ class setup():
                 os.remove(f"DATA/aria2/{url.split('/')[-1].replace('.zip',"")}/{file}")
             os.rmdir(f"DATA/aria2/{url.split('/')[-1].replace('.zip',"")}")
             Logging().info(i18n.file("aria2.install.success"))
+            
+    def config():
+        #生成配置文件
+        if os.path.exists("DATA/maa-cli/config") is False:
+            os.makedirs("DATA/maa-cli/config")
+        if os.path.exists("DATA/maa-cli/config/profiles") is False:
+            os.makedirs("DATA/maa-cli/config/profiles")
+        # 复制maa配置到config目录
+        with open("config.yml", "r", encoding="utf-8") as f:
+            config_data = yaml.safe_load(f)
+        if "maa" in config_data:
+            with open("DATA/maa-cli/config/profiles/config.yml", "w", encoding="utf-8") as f:
+                yaml.dump({"maa": config_data["maa"]["maa-core"]}, f, allow_unicode=True)
+        
